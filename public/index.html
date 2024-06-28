@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubectl Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/xterm/css/xterm.css" />
+</head>
+<body class="bg-dark text-light">
+    <div class="container-fluid">
+        <h1 class="my-4 text-light">Kubectl Dashboard</h1>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="mb-4">
+                    <input type="text" id="sshString" class="form-control bg-secondary text-light" placeholder="SSH String" value="azureuser@172.206.113.41">
+                    <input type="file" id="pemFile" class="form-control bg-secondary text-light mt-2">
+                    <button class="btn btn-primary mt-2" style="width: 100%" onclick="login()">Login</button>
+                    <p class="text-light" id="loginStatus"></p>
+                </div>
+                <div class="mb-4">
+                    <button class="btn btn-primary" onclick="listPods()" style="width: 100%">List Pods</button>
+                    <div id="podsList" class="mt-3"></div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div>
+                    <ul class="nav nav-tabs" id="logTabs" role="tablist"></ul>
+                    <div class="tab-content" id="logTabsContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/xterm/lib/xterm.js"></script>
+    <script src="https://unpkg.com/xterm-addon-fit/lib/xterm-addon-fit.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

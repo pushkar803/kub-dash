@@ -1,0 +1,58 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.nav-tabs .nav-link {
+    color: #e0e0e0;
+    background-color:#343a40 ;
+    border-color: #343a40;
+}
+
+.nav-tabs .nav-link.active {
+    color: #fff;
+    background-color: #1e1e1e;
+    border-color: #343a40 #343a40 #1e1e1e;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.form-control {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #343a40;
+}
+
+.nav-item .btn {
+    margin-left: 10px;
+}
+.tab-content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border: 1px solid #343a40;
+    border-top: none;
+}
+
+#pemFile {
+    position: relative;
+    font-family: calibri;
+    padding-bottom: 37px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    text-align: center;
+    background-color: #DDD;
+    cursor: pointer;
+}
